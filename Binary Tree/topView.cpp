@@ -36,14 +36,14 @@ Node* buildTree(vector<int>& nodes) {
   void topView(Node* root){
     queue<pair<Node* , int>> q; // node and horizontal distance
     map<int,int> m;
-    q.push(make_pair(root , 0));
+    q.push(make_pair(root , 0)); //horizontal distance for root node is zero;
     while(!q.empty()){
-    pair<Node* , int> curr = q.front();
-    q.pop();
-    Node* currnode = curr.first;
+    pair<Node* , int> curr = q.front(); // access the front value of queue
+    q.pop();    // pop it because curr contains its value;
+    Node* currnode = curr.first;  
     int dist = curr.second;
     if(m.count(dist) == 0){
-     m[dist] = currnode->data;
+     m[dist] = currnode->data;  // distance currnode value pair ;
     }
     if(currnode->left != NULL){
         pair<Node* , int> left = make_pair(currnode->left , dist-1);
