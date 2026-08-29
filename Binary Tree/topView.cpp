@@ -1,3 +1,5 @@
+// code for top view of binary tree
+
 #include <iostream>
 #include <vector>
 #include<queue>
@@ -67,5 +69,5 @@ int main() {
     };
     Node* root = buildTree(nodes);
     topView(root);
-    return 0;
+
 }
