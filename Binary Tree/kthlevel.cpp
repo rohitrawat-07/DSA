@@ -35,12 +35,14 @@ Node* buildTree(vector<int>& nodes) {
     if(root == nullptr){
         return;
     }
+    
+    kthhelp(root->left , k , curr+1);
+   
+    kthhelp(root->right, k , curr+1);
     if(curr == k){
         cout << root->data << "->";
         return;
     }
-    kthhelp(root->left , k , curr+1);
-    kthhelp(root->right, k , curr+1);
 
  }
  void kthlevel(Node* root , int k ){
