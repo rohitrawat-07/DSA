@@ -48,7 +48,7 @@ class Graph{
 };
 
 int main() {
-    Graph graph(5);
+    Graph graph(4);
     graph.addEdge(0 , 1);
     graph.addEdge(0 , 2);
     graph.addEdge(1 , 3);
